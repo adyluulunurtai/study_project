@@ -1,4 +1,4 @@
-let numberOfFilms = prompt("сколько фильмов вы уже посмотрели");
+let numberOfFilms = prompt("сколько фильмов вы уже посмотрели", '');
 
 let personalMovieDb = {
     'count' : numberOfFilms,
@@ -7,9 +7,9 @@ let personalMovieDb = {
     'genres' : [],
     'privat' : false
 }
-let filmFromUser = prompt("один из последних фиильмов");
-let gradeFilm = prompt("дайте оценку");
+let a = prompt("один из последних фиильмов" , '');
+let b = prompt("дайте оценку" , '');
 
-personalMovieDb[filmFromUser];
-personalMovieDb[gradeFilm];
+personalMovieDb.movies[a] = "ddd";
+
 console.log(personalMovieDb);
