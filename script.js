@@ -37,18 +37,21 @@ function rememberMyFilms(){
 
 rememberMyFilms();
 
-if(personalMovieDb.count<10){
-    console.log("prosmotreno malo filmov")
-}
-else if (personalMovieDb.count>10){
-    console.log("klassi4eskii zritel")
-}
-else if ( personalMovieDb.count>30){
-console.log("kinoman")
-}
-else{
-    console.log('proizowla owibka')
-}
+function detecPersonLevel(){
+    if(personalMovieDb.count<10){
+        console.log("prosmotreno malo filmov")
+    }
+    else if (personalMovieDb.count>10){
+        console.log("klassi4eskii zritel")
+    }
+    else if ( personalMovieDb.count>30){
+    console.log("kinoman")
+    }
+    else{
+        console.log('proizowla owibka')
+    }
+};
+detecPersonLevel();
 
 
 
