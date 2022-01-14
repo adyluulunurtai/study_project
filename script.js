@@ -63,4 +63,13 @@ function writeGenres() {
     }
 
 }
-writeGenres();
+//writeGenres();
+
+function learnJS(lang, callback){
+    console.log(`ya u4u ${lang}`)
+    callback()
+};
+
+learnJS("javascript", function(){
+    console.log("eto moi pervyi urok")
+})
