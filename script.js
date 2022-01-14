@@ -102,10 +102,42 @@ for (let value of arr){
  console.log(arr.length);
 
 
- arr.push(1, 2, 3, 4, 5, 6, 7, 8);
+ arr.push(1, 24, 32, 43, 15, 26, 7, 8);
+
+
+ arr.sort(compareNum);
+
+ function compareNum(a, b){
+     return(a-b)
+ }
+
  console.log(arr);
 
  let a = prompt('', '');
  let b = a.split(" ");
  b.join(' ')
  console.log(b);
+
+
+ const obj = {
+     a: 1,
+     b: 3,
+     c: {
+         x: 7,
+         y: 10
+     }
+ }
+
+ function copyObj(mainObj){
+     let newObj = {};
+    
+     for(let value in mainObj){
+        mainObj[value] = newObj[value] 
+     }
+ };
+
+ let d = copyObj(obj);
+ d.a = 12;
+
+ console.log(obj);
+ console.log(d);
