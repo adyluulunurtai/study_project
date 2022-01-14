@@ -9,11 +9,27 @@ function start() {
 //start();
 
 let personalMovieDb = {
-    'count': numberOfFilms,
-    'movies': {},
+    'count': 1,
+    'movies': {
+        'border':'black',
+        'bg' : 'ss'
+    },
     'actors': {},
     'genres': [],
     'privat': false
+};
+
+
+for (key in personalMovieDb) {
+    if(typeof(personalMovieDb[key]) === 'object'){
+        for(i in personalMovieDb[key]){
+            console.log(`${i} immet zna4enie ${personalMovieDb[key][i]}`);
+        }
+    }
+    else{
+        console.log(`${key} имеет значение ${personalMovieDb[key]}`);
+    }
+              
 }
 
 
@@ -26,23 +42,23 @@ function rememberMyFilms() {
             personalMovieDb.movies[a] = b;
             console.log("done")
         } else {
-            i--
-        };
+            i--;
+        }
 
-    };
-};
+    }
+}
 
 //rememberMyFilms();
 
 function detecPersonLevel() {
     if (personalMovieDb.count < 10) {
-        console.log("prosmotreno malo filmov")
+        console.log("prosmotreno malo filmov");
     } else if (personalMovieDb.count > 10) {
-        console.log("klassi4eskii zritel")
+        console.log("klassi4eskii zritel");
     } else if (personalMovieDb.count > 30) {
-        console.log("kinoman")
+        console.log("kinoman");
     } else {
-        console.log('proizowla owibka')
+        console.log('proizowla owibka');
     }
 };
 
@@ -66,10 +82,10 @@ function writeGenres() {
 //writeGenres();
 
 function learnJS(lang, callback){
-    console.log(`ya u4u ${lang}`)
-    callback()
-};
+    console.log(`ya u4u ${lang}`);
+    callback();
+}
 
-learnJS("javascript", function(){
-    console.log("eto moi pervyi urok")
-})
+//learnJS("javascript", function(){
+//    console.log("eto moi pervyi urok")
+//});
