@@ -8,7 +8,7 @@ function start(){
         numberOfFilms = prompt("сколько фильмов вы уже посмотрели", '');
     }
 }
-start();
+//start();
 
 let personalMovieDb = {
     'count' : numberOfFilms,
@@ -35,7 +35,7 @@ function rememberMyFilms(){
     };
 };
 
-rememberMyFilms();
+//rememberMyFilms();
 
 function detecPersonLevel(){
     if(personalMovieDb.count<10){
@@ -51,9 +51,23 @@ function detecPersonLevel(){
         console.log('proizowla owibka')
     }
 };
-detecPersonLevel();
+
+//detecPersonLevel();
 
 
+function showMyDb(){
+    if(personalMovieDb.privat == false){
+        console.log(personalMovieDb);
+    }
+}
+showMyDb();
 
+function writeGenres(){
+    for (let i = 0; i < 3 ; i++) {
+        let a = prompt(`ваш любимый жанр под номером ${i+1}` , '');
+        personalMovieDb.genres.push(a);
+    }
+   
+}
+writeGenres();
 
-console.log(personalMovieDb);
