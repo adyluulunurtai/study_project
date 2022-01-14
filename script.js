@@ -15,7 +15,7 @@ let personalMovieDb = {
         'bg' : 'ss'
     },
     'actors': {},
-    'genres': [],
+    'genres': [1, 2, 3],
     'privat': false
 };
 
@@ -23,11 +23,11 @@ let personalMovieDb = {
 for (key in personalMovieDb) {
     if(typeof(personalMovieDb[key]) === 'object'){
         for(i in personalMovieDb[key]){
-            console.log(`${i} immet zna4enie ${personalMovieDb[key][i]}`);
+            //console.log(`${i} immet zna4enie ${personalMovieDb[key][i]}`);
         }
     }
     else{
-        console.log(`${key} имеет значение ${personalMovieDb[key]}`);
+        //console.log(`${key} имеет значение ${personalMovieDb[key]}`);
     }
               
 }
@@ -89,3 +89,23 @@ function learnJS(lang, callback){
 //learnJS("javascript", function(){
 //    console.log("eto moi pervyi urok")
 //});
+
+let arr = [1, 2, 3, 9];
+
+for (let value of arr){
+    //console.log(value)
+}
+ arr.forEach(function(element, i, array) {
+  console.log(`index ${i} imeet zna4enie ${element} v massive ${array} `)   
+ });
+
+ console.log(arr.length);
+
+
+ arr.push(1, 2, 3, 4, 5, 6, 7, 8);
+ console.log(arr);
+
+ let a = prompt('', '');
+ let b = a.split(" ");
+ b.join(' ')
+ console.log(b);
