@@ -128,16 +128,23 @@ for (let value of arr){
      }
  }
 
+
  function copyObj(mainObj){
      let newObj = {};
     
      for(let value in mainObj){
-        mainObj[value] = newObj[value] 
+        newObj[value] = mainObj[value] ;
      }
+     return (newObj);
  };
 
  let d = copyObj(obj);
  d.a = 12;
+ d.c.x = 10;
+ 
+ let v = Object.assign({}, obj);
+ v.a = 19;
 
  console.log(obj);
- console.log(d);
+ //console.log(d);
+ console.log(v);
