@@ -148,3 +148,11 @@ for (let value of arr){
  console.log(obj);
  //console.log(d);
  console.log(v);
+
+ const oldArray = [1, 2, 3];
+ const newArray = oldArray.slice();
+
+ newArray[1] = 3;
+
+ console.log(oldArray);
+ console.log(newArray);
