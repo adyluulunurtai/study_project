@@ -156,3 +156,14 @@ for (let value of arr){
 
  console.log(oldArray);
  console.log(newArray);
+
+ const t = [1, 2, 3];
+ const o = [...t];
+ console.log (t);
+ console.log(o)
+
+ const video = ['youtube', 'vimeo', 'rutube'];
+ const blogs = ['livejournal', 'wordpress' ];
+ const internet = [...video, ...blogs, "vk", "instagram"]
+
+ console.log(internet);
