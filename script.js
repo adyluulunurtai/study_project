@@ -46,15 +46,24 @@ let personalMovieDb = {
         }
     },
     'writeGenres' : function(){
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 1; i++) {
 
-            let a = prompt(`ваш любимый жанр под номером ${i+1}`, '');
-            if (a === "" ||a ==null){
-                i--;
-            }
-            else{
-                personalMovieDb.genres.push(a);
-            }   
+          //  let a = prompt(`ваш любимый жанр под номером ${i+1}`, '');
+           // if (a === "" ||a ==null){
+           //     i--;
+          //  }
+          //  else{
+           //     personalMovieDb.genres.push(a);
+           // }   
+
+           let a = prompt("введите любимые жанры через запятую", "");
+
+           if(a === "" || a == null){
+               i--;
+           }
+           else{
+            personalMovieDb.genres = a.split(",");
+           }
         }
         personalMovieDb.genres.forEach((item, i) => {
             console.log(`любимый жанр № ${i+1} eto ${item}`)
@@ -70,5 +79,5 @@ let personalMovieDb = {
         }
     }
 };
-personalMovieDb.start();
+personalMovieDb.writeGenres();
 
